@@ -11,7 +11,8 @@ int** provisionarMatriz(int);
 void liberarMatriz(int**&,int);
 
 //imprimir la matriz
-void printMatriz(int**,int,int);
+//void printMatriz(int**,int,int);
+void printMatriz(int**,int);
 
 //leer la matriz
 int** readMatriz(int**,int);
@@ -40,7 +41,8 @@ int main(){
 			case 1:
 				matriz = provisionarMatriz(size);
 				readMatriz(matriz, size);
-				printMatriz(matriz, size, size);
+				//printMatriz(matriz, size, size);
+				printMatriz(matriz, size);
 				cout<<"Los puntos de silla son: "<<endl;
 				ejercicio1(matriz, size);
 				liberarMatriz(matriz, size);
@@ -134,14 +136,14 @@ void liberarMatriz(int**& matrix, int size){
         }
 }
 
-void printMatriz(int** matriz, int filas, int colum){
+/*void printMatriz(int** matriz, int filas, int colum){
 	int size=5;
     /*for(int i=0;i<size;i++){
         for(int j=0;j<size;j++){
         	cout<<"["<<matriz[i][j]<<"]";
 		}
 		cout<<endl;
-    }*/
+    }
     if(filas==size-1 && colum ==size-1){
     	cout<<"["<<matriz[filas][colum]<<"]";
 	}
@@ -155,6 +157,14 @@ void printMatriz(int** matriz, int filas, int colum){
 			printMatriz(matriz, filas, colum);
 		}
 	}
+}*/
+
+void printMatriz(int** matriz, int size){
+    for(int i=0;i<size;i++){
+        for(int j=0;j<size;j++)
+            cout<<"["<<matriz[i][j]<<"]";
+            cout<<endl;
+        }
 }
 
 void ejercicio1(int** matriz, int size){
