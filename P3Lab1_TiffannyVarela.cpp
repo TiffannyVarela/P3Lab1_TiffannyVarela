@@ -25,12 +25,14 @@ void retorno(int);
 
 //ejercicio3
 void ejercicio3(string);
+bool revision(string);
 
 int main(){
 	int opc =0;
 	int size = 5;
 	int** matriz = NULL;
 	int num;
+	string palabra;
 	do{
 		switch(opc=menu()){
 			
@@ -57,9 +59,12 @@ int main(){
 				break;
 				
 			case 3:
+				cout<<"Ingrese la palabra: "<<endl;
+				getline(cin, palabra);
 				break;
 				
 			case 4:
+				cout<<"Saliendo"<<endl;
 				break;
 		}
 	}while(opc!=4);
@@ -205,4 +210,35 @@ void retorno(int x){
 	}
 	cout<<past;
 }
+
+void ejercicio3(string palabra){
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
