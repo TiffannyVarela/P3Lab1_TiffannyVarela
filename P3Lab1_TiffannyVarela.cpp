@@ -135,12 +135,17 @@ void liberarMatriz(int**& matrix, int size){
 }
 
 void printMatriz(int** matriz, int size){
-    for(int i=0;i<size;i++){
+	int filas = 5;
+	int colum = 5;
+    /*for(int i=0;i<size;i++){
         for(int j=0;j<size;j++){
         	cout<<"["<<matriz[i][j]<<"]";
 		}
 		cout<<endl;
-    }
+    }*/
+    if(size==mattriz.length()-1 && size == matriz[0].length()-1){
+    	cout<<"["<<matriz[i][j]<<"]";
+	}
 }
 
 void ejercicio1(int** matriz, int size){
@@ -230,9 +235,9 @@ bool revision(string palabra, int tam){
 	for(int i=0; i<tam; i++){
 		caracter=palabra[i];
 		for(int j=0; j<tam; j++){
-			cout<<1<<endl;
+			//cout<<1<<endl;
 			if(caracter=palabra[j]){
-				cout<<2<<endl;
+				//cout<<2<<endl;
 				cont++;
 			}
 			//arreglo[i]=palabra[i];
@@ -242,7 +247,7 @@ bool revision(string palabra, int tam){
 		cout<<i<<"= "<<arreglo[i];
 	}*/
 	cout<<cont<<endl;
-	if(cont>0){
+	if(cont>tam*tam){
 		resp=true;
 	}
 	else{
