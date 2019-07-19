@@ -25,7 +25,7 @@ void retorno(int);
 
 //ejercicio3
 void ejercicio3(string);
-bool revision(string);
+bool revision(string, int);
 
 int main(){
 	int opc =0;
@@ -33,6 +33,7 @@ int main(){
 	int** matriz = NULL;
 	int num;
 	string palabra;
+	int tam;
 	do{
 		switch(opc=menu()){
 			
@@ -61,6 +62,12 @@ int main(){
 			case 3:
 				cout<<"Ingrese la palabra: "<<endl;
 				getline(cin, palabra);
+				getline(cin, palabra);
+				tam = palabra.length();
+				while(revision(palabra,tam)){
+					cout<<"Ingrese la palabra SIN REPETICIONES: "<<endl;
+					getline(cin, palabra);
+				}
 				break;
 				
 			case 4:
@@ -215,6 +222,34 @@ void ejercicio3(string palabra){
 	
 }
 
+bool revision(string palabra, int tam){
+	int cont=0;
+	bool resp;
+	char caracter;
+	//char arreglo[tam];
+	for(int i=0; i<tam; i++){
+		caracter=palabra[i];
+		for(int j=0; j<tam; j++){
+			cout<<1<<endl;
+			if(caracter=palabra[j]){
+				cout<<2<<endl;
+				cont++;
+			}
+			//arreglo[i]=palabra[i];
+		}
+	}
+	/*for(int i=0; i<tam; i++){
+		cout<<i<<"= "<<arreglo[i];
+	}*/
+	cout<<cont<<endl;
+	if(cont>0){
+		resp=true;
+	}
+	else{
+		resp=false;
+	}
+	return resp;
+}
 
 
 
